@@ -1,9 +1,33 @@
-blink, 
-.blink{
-    /* css styles go here  */
+blink,
+.blink {
+		/* css styles go here  */
+	-webkit-animation: blinkingText 1s step-end infinite;
+	-moz-animation: blinkingText 1s step-end infinite;
+	-o-animation: blinkingText 1s step-end infinite;
+	animation: blinkingText 1s step-end infinite;
 }
 
-.react-blink{
-    /* react styles go here  */
+.react-blink,
+.react-blink * {
+		/* react styles go here  */
+	animation: blinkingText 1s step-end infinite;
+}
+
+@keyframes blinkingText {
+	0% {
+		opacity: 1;
+	}
+	25% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	75% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
